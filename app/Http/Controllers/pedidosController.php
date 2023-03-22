@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\pedidos;
 use Illuminate\Support\Facades\DB;
+use App\Models\clientes;
+
 
 class PedidosController extends Controller
 {
@@ -35,11 +37,14 @@ class PedidosController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
+    {   
+        
         pedidos::create($request->all());
-
+        return redirect('/listar-pedidos')->with('sucesso','Pedido cadastrado com Sucesso!');
         //dd($request->all());
     }
+
+    
 
     /**
      * Display the specified resource.

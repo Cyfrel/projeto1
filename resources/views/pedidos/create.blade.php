@@ -1,9 +1,9 @@
 
-<x-layout title='Cadastrar Pedidos'>
+<x-layout title='Cadastrar Pedidos' >
     <div>
         <h1>Cadastrar Pedidos:</h1>
 
-        <form action="/cadastrar-pedidos" method="POST">
+        <form action="/cadastrar-pedidos" method="POST" style="background: #ffb43e">
             @csrf
             <div class="form-group">
                 <label >ID do Cliente</label>
@@ -17,7 +17,8 @@
                 <label >Data de Entrega</label>
                 <input type="date" class="form-control" id="data_entrega" name="data_entrega" required>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" style="background:#5d1c0c" >Submit</button>
             </form>
     </div>
+
 </x-layout>
