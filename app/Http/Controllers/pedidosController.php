@@ -21,8 +21,8 @@ class PedidosController extends Controller
         //dd($pedidos);
         $pedidos = pedidos::all();
         //dd($pedidos);
-
-        return view('pedidos.index')->with('pedidos', $pedidos);
+        $clientes = clientes::all();
+        return view('pedidos.index')->with('pedidos', $pedidos)->with('clientes', $clientes);
     }
 
     /**

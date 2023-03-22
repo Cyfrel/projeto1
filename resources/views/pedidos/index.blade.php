@@ -21,19 +21,25 @@
                 <th scope="col">Id Pedido</th>
                 <th scope="col">Id Cliente</th>
                 <th scope="col">Nome</th>
+                <th scope="col">Cidade</th>
                 <th scope="col">valor frete</th>
                 <th scope="col">data de entrega</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($pedidos as $pedido)
-                <tr>
-                    <th>{{ $pedido -> id_pedido }}</th>
-                    <td>{{ $pedido -> id_cliente }}</td>
-                    <td></td>
-                    <td>{{ $pedido -> valor_frete }}</td>
-                    <td>{{ $pedido -> data_entrega}}</td>
-                </tr>
+                    <tr>
+                        <th>{{ $pedido -> id_pedido }}</th>
+                        <td>{{ $pedido -> id_cliente }}</td>
+                        @foreach ($clientes as $cliente)
+                            @if($pedido -> id_cliente == $cliente -> id_cliente )
+                                <td>{{$cliente -> nome }}</td>
+                                <td>{{$cliente -> cidade}}</td>
+                            @endif
+                        @endforeach
+                        <td>{{ $pedido -> valor_frete }}</td>
+                        <td>{{ $pedido -> data_entrega}}</td>
+                    </tr>
                 @endforeach
             </tbody>
         </table>

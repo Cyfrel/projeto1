@@ -1,6 +1,16 @@
 
 <x-layout title='Cadastrar Pedidos' >
     <div>
+        <header class="navbar navbar-expand-sm navbar-dark  sticky-top  "> 
+        <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+            Geraldo Fulgêncio
+            </a>
+        </div>
+        </nav>
+    </div>
+    <div>
         <h1>Cadastrar Pedidos:</h1>
 
         <form action="/cadastrar-pedidos" method="POST" style="background: #ffb43e">

@@ -10,6 +10,7 @@ class Clientes extends Model
     protected $fillable = [
         'nome',
         'idade',
+        'cidade',
     ];
 
     use HasFactory;

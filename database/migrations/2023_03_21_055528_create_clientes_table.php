@@ -16,6 +16,7 @@ return new class extends Migration
             $table->id('id_cliente');
             $table->string('nome');
             $table->string('idade');
+            $table->string('cidade');
             $table->timestamps();
         });
     }
