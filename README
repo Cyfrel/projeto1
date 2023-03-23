@@ -1,0 +1,6 @@
+Eu utilizei para rodar o codigo o banco de dados MySQL
+
+- Dentro da pasta "dados DB" existem os dados que podem ser inseridos no banco para que sejam realizado os teste(tabela clientes e tabela pedidos)
+- primeiro criar as tabelas utilizando o "php artisan migrate" (utilizei como senha do banco "admin")
+- Após excecutar o artisan serve para rodar a aplicação
+- Os caminhos da aplicação para verificar as paginas são "http://127.0.0.1:8000/listar-pedidos" "http://127.0.0.1:8000/cadastrar-pedidos"("listar-pedidos""cadastrar-pedidos").
